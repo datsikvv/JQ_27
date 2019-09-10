@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hide show</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+</script>   
+    <style>
+        div {
+            background: red;
+            margin: 3px;
+            width: 80px;
+            float: left;
+            text-align: center;
+        }
+        p {
+            background: red;
+            margin: 3px;
+            width: 80px;
+            height: 80px;
+            float: left;
+            text-align: center;
+        }
+    </style>
+    <!-- <script type="text-javascript">
+        $(document).ready(function() {
+            $("#showF").click(function() {
+                $("div").show(2000, );
+            })
+        })
+    </script> -->
+
+    <script>
+        $(document).ready(function(){
+
+            $("#showF").click(function(){
+                $("div").first().hide("fast", function showNext(){
+                    $(this).next("div").hide("fast", showNext);
+                });
+            });
+
+// не работает
+
+            // $("#showSq").click(function(){
+            //    $("p").first().hide("fast", "linear", function() {
+            //        $(this).show(300);
+            //    });
+            // })
+
+
+
+            // $("#showSq").click(function(){
+            //    $("p").first().hide("fast", "linear").show(500)
+            //    });
+            // })
+            
+
+       
+    </script>
+</head>
+<body>
+    <button id="hideF">hide text </button>
+    <div>Helo 3,</div>
+    <div>how</div>
+    <div>Are</div>
+    <div>yOU</div>
+    <br>
+    <button id="hideSq">hide square </button>
+    <p>Squere</p>
+</body>
+</html>

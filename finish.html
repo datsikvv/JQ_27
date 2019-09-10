@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>queue stop</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+</script>   
+    <style>
+        div {
+            position: absolute;
+            background-color: green;
+            left: 0px;
+            top: 30px;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+        }
+        
+    </style>
+ 
+    <script>
+        $(document).ready(function(){
+            $("#go").click(function() {
+                $(".block").animate({ left: '1000px' }, 2000);
+            });
+
+            $("#stop").click(function() {
+                $(".block").stop();
+            });
+
+            $("#back").click(function() {
+                $(".block").animate({ left: '0px' }, 2000);
+            });
+            
+
+        });
+    </script>
+</head>
+<body>
+   <input type="button" id="go" value="Go" />
+   <input type="button" id="stop" value="Stop" />
+   <input type="button" id="back" value="Back" />
+   <div class="block"></div>
+</body>
+</html>

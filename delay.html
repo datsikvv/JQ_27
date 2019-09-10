@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Effects show</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+</script>   
+    <style>
+        
+    </style>
+ 
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function() {
+
+        $("p").fadeOut("slow").delay(3000).fadeIn("slow");
+
+
+            
+        })
+        });
+    </script>
+</head>
+<body>
+    <p>Paragraf 1</p>
+    <input id="button1"  type="button" value="Push me" />
+</body>
+</html>
